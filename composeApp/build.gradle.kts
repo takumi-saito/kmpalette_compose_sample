@@ -60,6 +60,7 @@ kotlin {
         appleMain {
             dependencies {
                 implementation(libs.ktor.client.darwin)
+//                implementation("org.jetbrains.skiko:skiko-ios:0.7.0") // 最新バージョンに置き換え
             }
         }
     }
