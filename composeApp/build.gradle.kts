@@ -33,6 +33,7 @@ kotlin {
         androidMain.dependencies {
             implementation(compose.preview)
             implementation(libs.androidx.activity.compose)
+            implementation(libs.ktor.client.android)
         }
         commonMain.dependencies {
             implementation(compose.runtime)
@@ -43,6 +44,7 @@ kotlin {
             implementation(compose.components.uiToolingPreview)
             implementation(libs.androidx.lifecycle.viewmodel)
             implementation(libs.androidx.lifecycle.runtime.compose)
+            implementation(libs.ktor.client.core)
             // Core library
             implementation(libs.kmpalette.core)
             // Optional extensions based on your image source
@@ -51,6 +53,14 @@ kotlin {
             implementation(libs.kmpalette.extensions.libres)
             implementation(libs.kmpalette.extensions.network)
             implementation(libs.kmpalette.extensions.file)
+            implementation(libs.coil)
+            implementation(libs.coil.compose)
+            implementation(libs.coil.network.ktor3)
+        }
+        appleMain {
+            dependencies {
+                implementation(libs.ktor.client.darwin)
+            }
         }
     }
 }
